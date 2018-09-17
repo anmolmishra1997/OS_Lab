@@ -1,0 +1,59 @@
+turtle>mkdir test
+
+turtle>ls
+a.out  lab3.pdf       pipes.c  sample-output  test
+dup.c  make-tokens.c  README   sample-turtle  turtle.c
+
+turtle>cd test 
+
+turtle>pwd
+/home/anmol/Desktop/OS_Lab/lab3/test
+
+turtle>cd ..
+
+turtle>pwd
+/home/anmol/Desktop/OS_Lab/lab3
+
+turtle>cd
+Wrong number of arguments
+
+turtle>rm test
+rm: cannot remove 'test': Is a directory
+
+turtle>rmdir test
+
+turtle>ls
+a.out  lab3.pdf       pipes.c  sample-output  turtle.c
+dup.c  make-tokens.c  README   sample-turtle
+
+turtle>sleep 5
+
+turtle>echo "Hello"
+"Hello"
+
+turtle>echo "Hello" > hello.txt
+
+turtle>ls
+a.out  hello.txt  make-tokens.c  README		sample-turtle
+dup.c  lab3.pdf   pipes.c	 sample-output	turtle.c
+
+turtle>cat hello.txt
+"Hello"
+
+turtle>cd hello.txt
+Incorrect Command
+
+turtle>cat hi.text
+cat: hi.text: No such file or directory
+
+turtle>sleep 5 ;; cat hello.txt ;; sleep 1 ;; echo "hi" ;; ls
+"Hello"
+"hi"
+a.out  hello.txt  make-tokens.c  README		sample-turtle
+dup.c  lab3.pdf   pipes.c	 sample-output	turtle.c
+
+turtle>cat hi.txt ;; echo "You know nothing Jon Snow"
+cat: hi.txt: No such file or directory
+"You know nothing Jon Snow"
+
+turtle>exit

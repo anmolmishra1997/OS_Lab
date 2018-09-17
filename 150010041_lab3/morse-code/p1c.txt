@@ -1,0 +1,10 @@
+When the grandchild process terminates before the child-
+Child 18422 is created by parent 18421
+Child 18423 is created by parent 18422
+Parent 18422: Child 18423 is exited
+Parent 18421: Child 18422 is exited
+
+When the child terminates before the grandchild -
+Child 18554 is created by parent 18553
+Child 18555 is created by parent 18554
+Parent 18553: Child 18554 is exited

@@ -1,0 +1,14 @@
+For the shell, input was taken directly using the make-tokens code.
+For every input, first token of the line was checked to determine the command. Apart from cd and exit, all other commands were handled using child processes.
+We forked a new child, and executed the command on this new child using the system binaries. The result or error was directly printed on our terminal.
+ 
+a) The cd command was built using the system call chdir(). Manually checked if the correct number of arguments have been provided and raised error if not. If chdir() call returned error, it was returned as well.
+The exit command was also handled manually by using exit() system call.
+
+b) All the other commands were directly executed using execvp() call and entire tokens array was passed as arguments.
+
+c) Closed the default output stream in the child process, and opened the file rightafter. Executed the rest of the command as in case b).
+
+d) Simply parsed the string to split it from ";;" and then ran each command one by one.
+
+Signal SIGINT was setup to be ignored.
