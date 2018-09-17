@@ -1,0 +1,9 @@
+/*ps output before giving input*/
+  PID STAT
+  510 S+
+
+/*ps output after giving input*/
+  PID STAT
+  510 Z+
+
+The process was initially in the waiting state for the input. After receiving the input, it gets terminated  and becomes a zombie process, until the parent wakes up from sleep to clean it.
