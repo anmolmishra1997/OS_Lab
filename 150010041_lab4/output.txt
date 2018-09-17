@@ -1,0 +1,56 @@
+
+1. head 5 hello.txt README -
+
+--hello.txt--
+turtle > helloxv6
+Hi! Welcome to the world of xv6!
+--README--
+xv6 is a re-implementation of Dennis Ritchie's and Ken Thompson's Unix
+Version 6 (v6).  xv6 loosely follows the structure and style of v6,
+but is implemented for a modern x86-based multiprocessor using ANSI C.
+
+ACKNOWLEDGMENTS
+
+2. ./cmd ls -
+
+.              1 1 512
+..             1 1 512
+README         2 2 2290
+cat            2 3 13472
+cmd            2 4 13032
+echo           2 5 12544
+forktest       2 6 8256
+grep           2 7 15296
+head           2 8 13744
+helloxv6       2 9 12368
+init           2 10 13136
+kill           2 11 12588
+ln             2 12 12496
+ls             2 13 14712
+mkdir          2 14 12612
+my_siblings    2 15 13788
+rm             2 16 12592
+sh             2 17 23240
+stressfs       2 18 13264
+usertests      2 19 56148
+wc             2 20 14128
+zombie         2 21 12320
+console        3 22 0
+output.txt     2 23 476
+
+3. ./cmd echo hello -
+
+hello
+
+4. helloxv6 - 
+
+Hi! Welcome to the world of xv6!
+
+5. my_siblings 6 1 2 1 0 2 0 -
+
+4 RUNNABLE
+5 ZOMBIE
+6 RUNNABLE
+7 SLEEPING
+8 ZOMBIE
+9 SLEEPING
