@@ -1,0 +1,2 @@
+The boot_sector1 file does not contain the last two bytes aa and 55, due to which its booting fails.
+The boot_secor2 file contains those and boots properly.
