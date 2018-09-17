@@ -1,0 +1,11 @@
+1. r is a pointer to a new struct of run type. This code segment is extending the free list. The existing freelist is mapped to r->next, and then r becomes the new head for the freelist.
+
+2.  1740 pde = &pgdir[PDX(va)];
+1742 pgtab = (pte_t*)p2v(PTE_ADDR(*pde));
+1753 return &pgtab[PTX(va)];
+
+Line 1740 is calculating the pointer to the Page Directory Entry of the given virtual address. PDX macro calculates the Page Directory Table Index, and we use it to navigate to the correct address in pgtab(page directory pointer).
+
+Line 1742 is calculating the address of the page table(level 1) corresponding to the given virtual address. PTE_ADDR gives the 20 bits from *pde(Page Directory Entry) which store the address of the page table entry. Since it stores the physical address, we convert it into virtual because we need to refer to it from the hardware(which will assume the input address is virtual).
+
+Line 1753 is identical to line 1740 except that it returns the page table entry pointer (corresponding to virtual address), while in line 1740 we calculated page directory entry pointer.
