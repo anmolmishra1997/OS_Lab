@@ -1,0 +1,8 @@
+Part 0 -
+
+i)  obtaining a spinlock - acquire
+	releasing a spinlock - release
+
+ii) Check whether this cpu is holding the lock
+
+iii) Add acquire(&ptable.lock); to line number 150 in proc.c, i.e. inside the function userinit where process's state is being set as runnable. This would trigger panic via holding function as we are calling acquire twice.
